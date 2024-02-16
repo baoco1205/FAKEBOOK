@@ -4,4 +4,12 @@ let GENDER = {
   WOMEN: 1,
   OTHER: 2,
 };
-module.exports = { DBCONFIG, GENDER };
+let FRIEND_REQUEST = {
+  HANDLE: 0,
+  DENY: 1,
+};
+let TYPE = {
+  TEXT: 0,
+  IMAGE: 1,
+};
+module.exports = { DBCONFIG, GENDER, FRIEND_REQUEST, TYPE };

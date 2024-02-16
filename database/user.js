@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const { GENDER, DELETE } = require("../const");
+const { GENDER } = require("../const");
 
 const userSchema = new Schema(
   {
