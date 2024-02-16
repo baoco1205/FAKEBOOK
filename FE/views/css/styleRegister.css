@@ -1,0 +1,46 @@
+#titleRegister {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#boxRegister {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: column;
+}
+#boxPassword {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+#boxGender {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+#boxUsername {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+#boxName {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+#boxGender {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+#boxAddress {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+#boxConfirmPassword {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
