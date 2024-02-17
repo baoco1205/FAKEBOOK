@@ -4,8 +4,8 @@ const { GENDER } = require("../const");
 
 const userSchema = new Schema(
   {
-    username: { type: String, min: 1, max: 50 },
-    password: { type: String, min: 1, max: 50 },
+    username: { type: String, min: 1, max: 50, required: true },
+    password: { type: String, min: 1, max: 50, required: true },
     yob: { type: Date },
     address: { type: String, max: 100 },
     // nickname: { type: String, min: 1, max: 20, match: /^[a-zA-Z0-9]{2,20}$/ },
@@ -18,5 +18,5 @@ const userSchema = new Schema(
   },
   { collection: "user", timestamps: true }
 );
-const userModel = mongoose.model("User", userSchema);
+const userModel = mongoose.model("user", userSchema);
 module.exports = userModel;
