@@ -18,7 +18,7 @@ app.use((err, req, res, next) => {
   var message = err.messageErr;
   res.status(statusCode).json(message);
 });
-app.use("", router);
+
 // /server connect database
 let databaseUtil = require("./utils/database.utils");
 databaseUtil.connect(function (err) {
@@ -32,12 +32,8 @@ app.use(function (req, res, next) {
   next();
 });
 const cors = require("cors");
-// const cors = require("cors", {
-//   cors: {
-//     origin: "*",
-//   },
-// });
 app.use(cors());
+app.use("", router);
 //setup socket
 const socket = require("./socketController/socket");
 socket(app, server);

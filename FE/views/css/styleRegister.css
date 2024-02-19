@@ -24,6 +24,11 @@
   align-items: center;
   gap: 1em;
 }
+#boxYOB {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
 #boxName {
   display: flex;
   align-items: center;

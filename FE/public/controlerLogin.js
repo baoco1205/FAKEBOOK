@@ -26,16 +26,19 @@ $(document).ready(() => {
       })
       .then((data) => {
         console.log(data);
-        // console.log(data.token);
-        let token = data.token;
+        let token = data.data;
+        console.log(token);
         localStorage.setItem("token", token);
 
-        location.href = "http://127.0.0.1:5500/views/newsfeed.html";
+        location.href = "http://127.0.0.1:5500/FE/views/newsfeed.html";
         // axios.defaults.headers.common["Bearer Token"] = `Bearer ${token}`;
         // authorization: `Bearer ${token}`,
       })
       .catch((error) => {
         console.error("There was a problem with the fetch operation:", error);
       });
+  });
+  $("#signUpButton").click(() => {
+    location.href = "http://127.0.0.1:5500/FE/views/register.html";
   });
 });
