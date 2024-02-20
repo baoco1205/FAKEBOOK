@@ -3,18 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Newsfeed</title>
     <script src="../public/jquery.js"></script>
     <!-- <script src="/socket.io/socket.io.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
     <script src="../public/controlerNewsfeed.js"></script>
+    <link rel="stylesheet" href="./css/styleNewsfeed.css" />
     <script>
       $(document).ready(function () {
         // alert("hello jquery");
       });
     </script>
   </head>
+
   <body>
-    test
+    <header>
+      <div id="header">
+        <div id="fakebook">test icon</div>
+        <div id="menuFakebook">
+          <div id="find">find</div>
+          <div id="friendNotification">friendNotification</div>
+          <div id="notification">notification</div>
+        </div>
+      </div>
+    </header>
+    <div id="all">
+      <div id="body">
+        <div id="posts">test post</div>
+        <div id="newsfeeds">test newsfeed</div>
+      </div>
+      <div id="friend">test body friend</div>
+    </div>
   </body>
 </html>

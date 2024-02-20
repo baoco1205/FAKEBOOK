@@ -1,6 +1,6 @@
 $(document).ready(() => {
   $("#buttonBack").click(() => {
-    location.href = "http://127.0.0.1:5500/FE/views/newsfeed.html";
+    location.href = "http://127.0.0.1:5500/FE/views/login.html";
   });
   $("#buttonRegister").click(() => {
     let username = $("#username").val();
@@ -37,13 +37,18 @@ $(document).ready(() => {
         if (!response.ok) {
           if (response.status === 400) {
             alert("Has problem at register, pls try again");
+            location.href = "http://127.0.0.1:5500/FE/views/register.html";
+          }
+          if (response.status === 409) {
+            alert("username is already in use");
+            location.href = "http://127.0.0.1:5500/FE/views/register.html";
           }
           throw new Error("Network response was not ok");
         }
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        alert("Register success. Please login");
         location.href = "http://127.0.0.1:5500/FE/views/login.html";
         // axios.defaults.headers.common["Bearer Token"] = `Bearer ${token}`;
         // authorization: `Bearer ${token}`,

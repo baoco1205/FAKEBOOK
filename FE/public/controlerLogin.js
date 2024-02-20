@@ -3,7 +3,9 @@ $(document).ready(() => {
     let username = $("#username").val();
     let password = $("#password").val();
     console.log(username, password);
-
+    if (!username || !password) {
+      alert("Username or password must be not null");
+    }
     fetch("http://localhost:3000/login", {
       method: "POST",
       headers: {
